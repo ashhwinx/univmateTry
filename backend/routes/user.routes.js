@@ -9,7 +9,6 @@ router.post("/register", [
     body('email').isEmail().withMessage("Invalid Email"),
     body('fullname').isLength({ min: 6 }).withMessage('Fullname must be at least 6 characters long'),
     body('password').isLength({ min: 6 }).withMessage('ok password must be at least 6 character long'),
-    body('semester').notEmpty().withMessage('Semester is required'),
     body('section').notEmpty().withMessage('section is required')
 ],
 userController.registerUser

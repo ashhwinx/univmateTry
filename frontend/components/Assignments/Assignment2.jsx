@@ -162,9 +162,9 @@ const pdfUrls = {
 
 
 
-const Lab2 = () => {
+const  Assignment2 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+   console.log(activeIndex)
   const containerRef = useRef(null);
   const selectorRef = useRef(null);
 
@@ -269,5 +269,4 @@ const handleUnitClick = (unit) => {
   );
 };
 
-export default Lab2;
-
+export default Assignment2;

@@ -4,36 +4,39 @@ const {validationResult}=require('express-validator');
 const blacklistTokenModel = require("../model/blacklistToken.model");
 
 
-module.exports.registerUser= async (req,res,next)=>{
-    const errors = validationResult(req);
+module.exports.registerUser = async (req, res, next) => {
+    try {
+        const errors = validationResult(req);
 
-    if (!errors.isEmpty()){
-       return res.status(400).json({errors: errors.array()});
+        if (!errors.isEmpty()) {
+            return res.status(400).json({errors: errors.array()});
+        }
+
+        const {fullname, email, password, section} = req.body;
+
+        const isUserAlreadyExist = await userModel.findOne({email});
+
+        if (isUserAlreadyExist) {
+            return res.status(400).json({message: 'user already exist'});
+        }
+
+        const hashedPassword = await userModel.hashPassword(password);
+
+        const user = await userService.createUser({
+            fullname,
+            email,
+            password: hashedPassword,
+            section
+        });
+
+        const token = user.generateAuthToken();
+
+        // Use status() and json() separately
+        return res.status(201).json({token, user});
+    } catch (error) {
+        return res.status(500).json({message: 'Server error', error: error.message});
     }
-
-    const {fullname,email, password,semester,section}=req.body;
-  
-
-    const isUserAlreadyExist =await userModel.findOne({email});
-
-   if(isUserAlreadyExist){
-       return res.status(400).json({message:'user already exist'})
-   }
-
-    const hashedPassword = await userModel.hashPassword(password);
-
-    const user = await userService.createUser({
-       fullname,
-       email,
-       password:hashedPassword,
-       semester,
-       section
-    })
-
-    const token = user.generateAuthToken();
-
-    res.send(201).json({token,user});
-}
+};
 
 
 module.exports.loginUser= async (req,res,next)=>{

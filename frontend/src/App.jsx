@@ -10,6 +10,7 @@ import LabWork from "../pages/LabWork";
 import ChatBot from '../pages/ChatBot';
 import UserProtectWrapper from '../pages/UserProtectWrapper';
 import UnitPDFViewer from '../components/UnitPDFViewer';
+import Assignment from '../pages/Assignment'
 
 function App() {
   
@@ -19,12 +20,13 @@ function App() {
     <>
       <Routes>
       
+      <Route path='/assignment' element={<Assignment/>}/>
         <Route path='/login' element={<UserLogin/>}/>
         <Route path='/signup' element={<UserSignup/>}/>
         <Route path='/pyq' element={<PYQ/>}/>
         <Route path='/labwork' element={<LabWork/>}/>
         <Route path='/classnotes' element={<ClassNotes/>}/>
-        <Route path='/chatbot' element={<ChatBot/>}/>
+        <Route path='/unibuddy' element={<ChatBot/>}/>
         <Route path='/' element={
           <UserProtectWrapper>
             <Start/>

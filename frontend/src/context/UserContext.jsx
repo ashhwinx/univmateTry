@@ -11,7 +11,7 @@ const UserContext = ({children}) => {
             email: '',
             fullname: '',
             section: '',
-            semester: ''
+         
         };
     });
 

@@ -13,44 +13,76 @@ const subjects = [
 // Add this after the subjects array
 const subjectUnits = {
   "Engineering Mathematics - II": [
-    "Matrices and Linear Equations",
-    "Calculus",
-    "Multiple Integrals",
-    "Vector Calculus",
-    "Differential Equations",
-    "Laplace Transforms"
+    // "Matrices and Linear Equations",
+    // "Calculus",
+    // "Multiple Integrals",
+    // "Vector Calculus",
+    // "Differential Equations",
+    // "Laplace Transforms",
+
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+
+
   ],
   "Engineering Chemistry": [
-    "Atomic Structure",
-    "Chemical Bonding",
-    "Electrochemistry",
-    "Corrosion",
-    "Water Chemistry",
-    "Polymers"
+    // "Water",
+    // "Organic Fuels",
+    // "Corrosion and its control:",
+    // "Engineering Materials",
+    // "Organcic Chemistry",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
   ],
   "Basic Civil Engineering": [
-    "Introduction to Civil Engineering",
-    "Surveying",
-    "Construction Materials",
-    "Building Construction",
-    "Transportation Engineering",
-    "Environmental Engineering"
+    // "Introduction to Civil Engineering",
+    // "Building ",
+    // "Surveying",
+    // "Transportation",
+    // "Environmental Engineering",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
   ],
   "Basic Mechanical Engineering": [
-    "Thermodynamics",
-    "Machine Elements",
-    "Manufacturing Processes",
-    "Power Generation",
-    "IC Engines",
-    "Fluid Mechanics"
+    // "Fundamentals",
+    // "Pumps and IC Engines",
+    // "Refrigeration and Air Conditioning",
+    // "(a) Transmission of Power ",
+    // "Primary Manufacturing Processes",
+
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
   ],
   "Human Values": [
-    "Understanding Harmony",
-    "Values and Ethics",
-    "Professional Ethics",
-    "Family Values",
-    "Social Values",
-    "Environmental Ethics"
+    // "Course Introduction",
+    // "Understanding Harmony in the Human Being",
+    // "Understanding Harmony in the Family and Society",
+    // "Understanding Harmony in the Nature and Existence",
+    // "Implications of the above Holistic Understanding of Harmony",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+   
   ]
 };
 // Add this after subjectUnits object
@@ -69,60 +101,59 @@ const pdfUrls = {
     "Laplace Transforms": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"    // Add URLs for other units
   },
   "Engineering Chemistry": {
-    "Atomic Structure" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Chemical Bonding": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Water": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Electrochemistry": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Organic Fuels": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Corrosion" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Corrosion and its control:": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Water Chemistry" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Engineering Materials": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Polymers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Organic Chemistry": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 },
 "Basic Civil Engineering": {
-    "Introduction to Civil Engineering" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal" ,
+
+  "Introduction to Civil Engineering ": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+    "Building": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
     "Surveying": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Construction Materials": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Transportation": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Building Construction": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-
-    "Transportation Engineering": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-
-    "Environmental Engineering": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Environmental Engineering": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    
 },
 "Basic Mechanical Engineering": {
-    "Thermodynamics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Machine Elements" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+"Fundamentals": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Manufacturing Processes" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Pumps and IC Engines": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Power Generation": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Refrigeration and Air Conditioning": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "IC Engines" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Transmission of Power": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Fluid Mechanics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Primary Manufacturing Processes": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+
+    
 },
   "Human Values": {
-    "Understanding Harmony": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Values and Ethics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Course Introduction:": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Professional Ethics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Understanding Harmony in the Human Being": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Family Values": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Understanding Harmony in the Family and Society": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Social Values": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-    
-    "Environmental Ethics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Understanding Harmony in the Nature and Existence": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+    "Implications of the above Holistic Understanding of Harmony": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
   }
   // other subjects
 };
-
 
 
 const CNHero = () => {

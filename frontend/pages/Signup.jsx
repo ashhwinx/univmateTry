@@ -9,7 +9,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [section, setSection] = useState("");
-  const [semester, setSemester] = useState("");
+  
   const [otp, setOtp] = useState("");
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
@@ -54,28 +54,28 @@ const Signup = () => {
       email,
       password,
       section,
-      semester,
+ 
     };
 
     const response = await axios.post(
       `${import.meta.env.VITE_BASE_URL}/users/register`,
       newUser
     );
+    
 
-    if (response.status === 200) {
+    if (response.status === 201) {
       const data = response.data;
       setUser(data.user);
       localStorage.setItem("token", data.token);
       navigate("/home");
     }
 
-    console.log(email)
 
     setFullname("");
     setEmail("");
     setPassword("");
     setSection("");
-    setSemester("");
+ 
   };
 
   return (
@@ -160,18 +160,7 @@ const Signup = () => {
                 className="mb-4 px-4 py-2 rounded-md bg-[#0a2a43] text-white placeholder-gray-300 border border-[#0a51ad] focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
               />
 
-              <select
-                required
-                value={semester}
-                onChange={(e) => setSemester(e.target.value)}
-                className="mb-4 px-4 py-2 rounded-md bg-[#0a2a43] text-white border border-[#0a51ad] focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-              >
-                <option value="" disabled hidden>
-                  Select Semester
-                </option>
-                <option value="A">First Semester</option>
-                <option value="B">Second Semester</option>
-              </select>
+             
 
               <select
                 required

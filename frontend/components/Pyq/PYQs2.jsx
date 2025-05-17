@@ -4,58 +4,92 @@ import { useNavigate } from "react-router-dom";
 
 const subjects = [
   "Engineering Mathematics - II",
-  "Engineering Chemistry",
-  "Basic Civil Engineering",
-  "Basic Mechanical Engineering",
-  "Human Values",
+  "Engineering Physics",
+  "Basic Electrical Engineering",
+  "Programming for Problem Solving",
+  "Communication Skills",
 ];
 
 // Add this after the subjects array
 const subjectUnits = {
   "Engineering Mathematics - II": [
-    "Matrices and Linear Equations",
-    "Calculus",
-    "Multiple Integrals",
-    "Vector Calculus",
-    "Differential Equations",
-    "Laplace Transforms"
+    // "Matrices and Linear Equations",
+    // "Calculus",
+    // "Multiple Integrals",
+    // "Vector Calculus",
+    // "Differential Equations",
+    // "Laplace Transforms",
+
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!"
   ],
-  "Engineering Chemistry": [
-    "Atomic Structure",
-    "Chemical Bonding",
-    "Electrochemistry",
-    "Corrosion",
-    "Water Chemistry",
-    "Polymers"
+  "Engineering Physics": [
+
+    // "Wave Optics",
+    // "Quantum Mechanics & Coherence and Optical Fibers",
+    // "Laser",
+    // "Material Science & Semiconductor Physics",
+    // "Introduction to Electromagnetism",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    
   ],
-  "Basic Civil Engineering": [
-    "Introduction to Civil Engineering",
-    "Surveying",
-    "Construction Materials",
-    "Building Construction",
-    "Transportation Engineering",
-    "Environmental Engineering"
+  "Basic Electrical Engineering": [
+    // "DC Circuits",
+    // "AC Circuits",
+    // "Transformers",
+    // "Electrical Machines",
+    // "Power Converters & Electrical Installations",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+
   ],
-  "Basic Mechanical Engineering": [
-    "Thermodynamics",
-    "Machine Elements",
-    "Manufacturing Processes",
-    "Power Generation",
-    "IC Engines",
-    "Fluid Mechanics"
+  "Programming for Problem Solving": [
+    // "Fundamentals of Computer",
+    // "Number system",
+    // "Algorithms Statements",
+    // "Fundamental of C programming",
+    // "Functions and file handling Programming",
+    // "Fluid Mechanics"
+
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
   ],
-  "Human Values": [
-    "Understanding Harmony",
-    "Values and Ethics",
-    "Professional Ethics",
-    "Family Values",
-    "Social Values",
-    "Environmental Ethics"
+  "Communication Skills": [
+    // "Communication",
+    // "Grammer",
+    // "Composition",
+    // "Short Stories",
+    // "Poems"
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
   ]
 };
 // Add this after subjectUnits object
 const pdfUrls = {
-  "Engineering Mathematics - II": {
+  "Engineering Mathematics - I": {
+
     "Matrices and Linear Equations": "https://drive.google.com/file/d/1_eDxUT4ZakU-9Q_Q77f_mfznpUJRcqlg/preview?embedded=true&rm=minimal",
 
     "Calculus": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
@@ -68,57 +102,60 @@ const pdfUrls = {
 
     "Laplace Transforms": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"    // Add URLs for other units
   },
-  "Engineering Chemistry": {
-    "Atomic Structure" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+  "Engineering Physics": {
 
-    "Chemical Bonding": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Wave Optics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Electrochemistry": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Quantum Mechanics & Coherence and Optical Fibers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Corrosion" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Laser": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Water Chemistry" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Material Science & Semiconductor Physics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Polymers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Introduction to Electromagnetism": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+
 },
-"Basic Civil Engineering": {
-    "Introduction to Civil Engineering" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal" ,
+"Basic Electrical Engineering": {
 
-    "Surveying": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "DC Circuits": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Construction Materials": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "AC Circuits": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Building Construction": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Transformers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Transportation Engineering": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Electrical Machines": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Environmental Engineering": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Power Converters & Electrical Installations": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
 },
-"Basic Mechanical Engineering": {
-    "Thermodynamics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+"Programming for Problem Solving": {
+    "Fundamentals of Computer": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Machine Elements" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Number system": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Manufacturing Processes" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Algorithms Statements": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Power Generation": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Fundamental of C programming": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "IC Engines" : "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Functions and file handling Programming": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Fluid Mechanics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Fluid Mechanics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+   
 },
-  "Human Values": {
-    "Understanding Harmony": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Values and Ethics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+  "Communication Skills": {
 
-    "Professional Ethics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Communication": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Family Values": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Grammer": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Social Values": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-    
-    "Environmental Ethics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"
+    "Composition": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+    "Short Stories": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+    "Poems": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
   }
   // ... other subjects
 };
@@ -232,3 +269,4 @@ const handleUnitClick = (unit) => {
 };
 
 export default PYQ2;
+

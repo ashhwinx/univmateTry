@@ -21,11 +21,7 @@ const userSchema = new mongoose.Schema({
       minlength:[6,'password must be at least 6 characters long'],
       select:false,
     },
-    semester:{
-      type:String,
-        required: true,
-        enum: ["A","B"]
-    },
+    
     section:{
         type:String,
         required: true,

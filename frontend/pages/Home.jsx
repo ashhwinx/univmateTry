@@ -15,8 +15,6 @@ const Home = () => {
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem('user'));
-  console.log(user)
-  console.log(user.fullname)
  
 useEffect(() => {
     const token = localStorage.getItem('token');

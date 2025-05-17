@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const subjects = [
   "Engineering Mathematics - II",
-  "Engineering Physics",
-  "Basic Electrical Engineering",
-  "Programming for Problem Solving",
-  "Communication Skills",
+  "Engineering Chemistry",
+  "Basic Civil Engineering",
+  "Basic Mechanical Engineering",
+  "Human Values",
 ];
 
 // Add this after the subjects array
@@ -26,44 +26,42 @@ const subjectUnits = {
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
-    "Coming Soon!"
-  ],
-  "Engineering Physics": [
+    "Coming Soon!",
 
-    // "Wave Optics",
-    // "Quantum Mechanics & Coherence and Optical Fibers",
-    // "Laser",
-    // "Material Science & Semiconductor Physics",
-    // "Introduction to Electromagnetism",
-
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
-    
-  ],
-  "Basic Electrical Engineering": [
-    // "DC Circuits",
-    // "AC Circuits",
-    // "Transformers",
-    // "Electrical Machines",
-    // "Power Converters & Electrical Installations",
-
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
 
   ],
-  "Programming for Problem Solving": [
-    // "Fundamentals of Computer",
-    // "Number system",
-    // "Algorithms Statements",
-    // "Fundamental of C programming",
-    // "Functions and file handling Programming",
-    // "Fluid Mechanics"
+  "Engineering Chemistry": [
+    // "Water",
+    // "Organic Fuels",
+    // "Corrosion and its control:",
+    // "Engineering Materials",
+    // "Organcic Chemistry",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+  ],
+  "Basic Civil Engineering": [
+    // "Introduction to Civil Engineering",
+    // "Building ",
+    // "Surveying",
+    // "Transportation",
+    // "Environmental Engineering",
+
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+    "Coming Soon!",
+  ],
+  "Basic Mechanical Engineering": [
+    // "Fundamentals",
+    // "Pumps and IC Engines",
+    // "Refrigeration and Air Conditioning",
+    // "(a) Transmission of Power ",
+    // "Primary Manufacturing Processes",
 
 
     "Coming Soon!",
@@ -72,24 +70,24 @@ const subjectUnits = {
     "Coming Soon!",
     "Coming Soon!",
   ],
-  "Communication Skills": [
-    // "Communication",
-    // "Grammer",
-    // "Composition",
-    // "Short Stories",
-    // "Poems"
+  "Human Values": [
+    // "Course Introduction",
+    // "Understanding Harmony in the Human Being",
+    // "Understanding Harmony in the Family and Society",
+    // "Understanding Harmony in the Nature and Existence",
+    // "Implications of the above Holistic Understanding of Harmony",
 
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
+   
   ]
 };
 // Add this after subjectUnits object
 const pdfUrls = {
-  "Engineering Mathematics - I": {
-
+  "Engineering Mathematics - II": {
     "Matrices and Linear Equations": "https://drive.google.com/file/d/1_eDxUT4ZakU-9Q_Q77f_mfznpUJRcqlg/preview?embedded=true&rm=minimal",
 
     "Calculus": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
@@ -102,69 +100,66 @@ const pdfUrls = {
 
     "Laplace Transforms": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal"    // Add URLs for other units
   },
-  "Engineering Physics": {
+  "Engineering Chemistry": {
 
-    "Wave Optics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Water": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Quantum Mechanics & Coherence and Optical Fibers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Organic Fuels": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Laser": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Corrosion and its control:": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Material Science & Semiconductor Physics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Engineering Materials": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Introduction to Electromagnetism": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-
-
+    "Organic Chemistry": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 },
-"Basic Electrical Engineering": {
+"Basic Civil Engineering": {
 
-    "DC Circuits": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+  "Introduction to Civil Engineering ": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "AC Circuits": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Building": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Transformers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Surveying": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Electrical Machines": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Transportation": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Power Converters & Electrical Installations": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-
+    "Environmental Engineering": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    
 },
-"Programming for Problem Solving": {
-    "Fundamentals of Computer": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+"Basic Mechanical Engineering": {
 
-    "Number system": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+"Fundamentals": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Algorithms Statements": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Pumps and IC Engines": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Fundamental of C programming": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Refrigeration and Air Conditioning": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Functions and file handling Programming": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Transmission of Power": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Fluid Mechanics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-   
+    "Primary Manufacturing Processes": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+
+
+    
 },
+  "Human Values": {
 
-  "Communication Skills": {
+    "Course Introduction:": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Communication": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Understanding Harmony in the Human Being": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Grammer": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Understanding Harmony in the Family and Society": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Composition": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Understanding Harmony in the Nature and Existence": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
-    "Short Stories": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-
-    "Poems": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
-
+    "Implications of the above Holistic Understanding of Harmony": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
   }
-  // ... other subjects
+  // other subjects
 };
 
 
 
-const Lab2 = () => {
+const  Assignment1 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+   console.log(activeIndex)
   const containerRef = useRef(null);
   const selectorRef = useRef(null);
 
@@ -269,5 +264,4 @@ const handleUnitClick = (unit) => {
   );
 };
 
-export default Lab2;
-
+export default Assignment1;
