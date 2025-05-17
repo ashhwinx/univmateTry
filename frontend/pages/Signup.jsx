@@ -18,18 +18,22 @@ const Signup = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserDataContext);
 
-  const sendOtp = async () => {
+const sendOtp = async () => {
   try {
-    console.log("Sending OTP to email:", email); // Debug log
-    await axios.post(`${import.meta.env.VITE_BASE_URL}/users/send-otp`, { email }); // Wrap email in an object
-    setIsOtpSent(true);
-    alert("OTP sent to your email");
+    console.log("Sending OTP to email:", email);
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/send-otp`, { email });
+    if (response.status === 200) {
+      setIsOtpSent(true);
+      alert("OTP sent to your email. Please check your inbox and spam folder.");
+    }
   } catch (error) {
-    console.error("Error sending OTP:", error.response ? error.response.data : error.message); // Log error details
-    alert("Failed to send OTP. Please check your email and try again.");
+    console.error("Error sending OTP:", error);
+    const errorMessage = error.response?.data?.error || 
+                        error.response?.data?.message || 
+                        "Failed to send OTP. Please try again.";
+    alert(errorMessage);
   }
 };
-
   const verifyOtp = async () => {
     try {
       const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/verify-otp`, { email, otp });

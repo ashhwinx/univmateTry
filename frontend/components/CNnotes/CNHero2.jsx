@@ -13,16 +13,16 @@ const subjects = [
 // Add this after the subjects array
 const subjectUnits = {
   "Engineering Mathematics - II": [
-    // "Matrices and Linear Equations",
-    // "Calculus",
+    "Matrices and Linear Equations",
+    "Calculus",
     // "Multiple Integrals",
     // "Vector Calculus",
     // "Differential Equations",
     // "Laplace Transforms",
 
 
-    "Coming Soon!",
-    "Coming Soon!",
+    // "Coming Soon!",
+    // "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
@@ -30,15 +30,15 @@ const subjectUnits = {
   ],
   "Engineering Physics": [
 
-    // "Wave Optics",
-    // "Quantum Mechanics & Coherence and Optical Fibers",
-    // "Laser",
+    "Wave Optics",
+    "Quantum Mechanics & Coherence and Optical Fibers",
+    "Laser",
     // "Material Science & Semiconductor Physics",
     // "Introduction to Electromagnetism",
 
-    "Coming Soon!",
-    "Coming Soon!",
-    "Coming Soon!",
+    // "Coming Soon!",
+    // "Coming Soon!",
+    // "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
     
@@ -88,11 +88,11 @@ const subjectUnits = {
 };
 // Add this after subjectUnits object
 const pdfUrls = {
-  "Engineering Mathematics - I": {
+  "Engineering Mathematics - II": {
 
-    "Matrices and Linear Equations": "https://drive.google.com/file/d/1_eDxUT4ZakU-9Q_Q77f_mfznpUJRcqlg/preview?embedded=true&rm=minimal",
+    "Matrices and Linear Equations": "https://drive.google.com/file/d/16iKW4_XD-Tq44s7AhwR343JLkQ3jaUji/preview?embedded=true&rm=minimal",
 
-    "Calculus": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Calculus": "https://drive.google.com/file/d/17glxz9aIm8tlms7cdvSO0gd1MR4EZ1_7/preview?embedded=true&rm=minimal",
 
      "Multiple Integrals": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
@@ -104,11 +104,11 @@ const pdfUrls = {
   },
   "Engineering Physics": {
 
-    "Wave Optics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Wave Optics": "https://drive.google.com/file/d/1GpcjhHeowcN8ON8Wkx_IvOlIi2w0FUUD/preview?embedded=true&rm=minimal",
 
-    "Quantum Mechanics & Coherence and Optical Fibers": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Quantum Mechanics & Coherence and Optical Fibers": "https://drive.google.com/file/d/1WuzPxF-G4FMvDFHndgTyi-N-n-4AIlhi/preview?embedded=true&rm=minimal",
 
-    "Laser": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Laser": "https://drive.google.com/file/d/1MLeBvGVGfzcy5qfOASlZpMgUp09MQtfC/preview?embedded=true&rm=minimal",
 
     "Material Science & Semiconductor Physics": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 

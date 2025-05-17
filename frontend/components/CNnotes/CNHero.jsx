@@ -13,16 +13,16 @@ const subjects = [
 // Add this after the subjects array
 const subjectUnits = {
   "Engineering Mathematics - II": [
-    // "Matrices and Linear Equations",
-    // "Calculus",
+    "Matrices and Linear Equations",
+    "Calculus",
     // "Multiple Integrals",
     // "Vector Calculus",
     // "Differential Equations",
     // "Laplace Transforms",
 
 
-    "Coming Soon!",
-    "Coming Soon!",
+    // "Coming Soon!",
+    // "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
@@ -44,13 +44,13 @@ const subjectUnits = {
     "Coming Soon!",
   ],
   "Basic Civil Engineering": [
-    // "Introduction to Civil Engineering",
+    "Introduction to Civil Engineering",
     // "Building ",
     // "Surveying",
     // "Transportation",
     // "Environmental Engineering",
 
-    "Coming Soon!",
+    // "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
     "Coming Soon!",
@@ -88,9 +88,9 @@ const subjectUnits = {
 // Add this after subjectUnits object
 const pdfUrls = {
   "Engineering Mathematics - II": {
-    "Matrices and Linear Equations": "https://drive.google.com/file/d/1_eDxUT4ZakU-9Q_Q77f_mfznpUJRcqlg/preview?embedded=true&rm=minimal",
+      "Matrices and Linear Equations": "https://drive.google.com/file/d/16iKW4_XD-Tq44s7AhwR343JLkQ3jaUji/preview?embedded=true&rm=minimal",
 
-    "Calculus": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Calculus": "https://drive.google.com/file/d/17glxz9aIm8tlms7cdvSO0gd1MR4EZ1_7/preview?embedded=true&rm=minimal",
 
      "Multiple Integrals": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
@@ -102,7 +102,7 @@ const pdfUrls = {
   },
   "Engineering Chemistry": {
 
-    "Water": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+    "Water": "https://drive.google.com/file/d/1oMO-42LUKQOUDmh-QkSyFXkgTep0JVTL/preview?embedded=true&rm=minimal",
 
     "Organic Fuels": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 
@@ -114,7 +114,7 @@ const pdfUrls = {
 },
 "Basic Civil Engineering": {
 
-  "Introduction to Civil Engineering ": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
+  "Introduction to Civil Engineering ": "https://drive.google.com/file/d/1PX_toD36LvnL9FLaj1HmRkcw0zcOZNt4/preview?embedded=true&rm=minimal",
 
     "Building": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
 

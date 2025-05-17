@@ -18,7 +18,7 @@ module.exports.sendOTPViaEmail = async (email, otp) => {
   console.log(otp)
   const msg = {
     to: email,
-    from: 'fedvexx@gmail.com', // Replace with a verified sender email
+    from: process.env.FROM_EMAIL, // Replace with a verified sender email
     subject: 'Your OTP Code',
     text: `Your OTP code is ${otp}. It is valid for 5 minutes.`,
   };
