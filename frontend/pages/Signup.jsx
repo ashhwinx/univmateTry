@@ -20,8 +20,29 @@ const Signup = () => {
 
 const sendOtp = async () => {
   try {
+    if (!email) {
+      alert("Please enter your email address");
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
     console.log("Sending OTP to email:", email);
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/send-otp`, { email });
+    const response = await axios.post(
+      `${import.meta.env.VITE_BASE_URL}/users/send-otp`, 
+      { email },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+
     if (response.status === 200) {
       setIsOtpSent(true);
       alert("OTP sent to your email. Please check your inbox and spam folder.");
@@ -34,6 +55,8 @@ const sendOtp = async () => {
     alert(errorMessage);
   }
 };
+
+
   const verifyOtp = async () => {
     try {
       const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/verify-otp`, { email, otp });

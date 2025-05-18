@@ -15,19 +15,33 @@ module.exports.generateOTP = (email) => {
 };
 
 module.exports.sendOTPViaEmail = async (email, otp) => {
-  console.log(otp)
-  const msg = {
-    to: email,
-    from: process.env.FROM_EMAIL, // Replace with a verified sender email
-    subject: 'Your OTP Code',
-    text: `Your OTP code is ${otp}. It is valid for 5 minutes.`,
-  };
   try {
+    const msg = {
+      to: email,
+      from: {
+        email: process.env.FROM_EMAIL,
+        name: 'UnivMate'
+      },
+      subject: 'Your OTP for UnivMate Registration',
+      text: `Your OTP code is ${otp}. It is valid for 5 minutes.`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #0a51ad;">UnivMate OTP Verification</h2>
+          <p>Your OTP code is: <strong style="font-size: 24px; color: #0a51ad;">${otp}</strong></p>
+          <p>This code will expire in 5 minutes.</p>
+        </div>
+      `
+    };
+
     await sgMail.send(msg);
     console.log('OTP email sent successfully to:', email);
+    return true;
   } catch (error) {
-    console.error('Error sending OTP email:', error.response ? error.response.body : error.message);
-    throw new Error('Failed to send OTP email');
+    console.error('SendGrid Error:', error);
+    if (error.response) {
+      console.error(error.response.body);
+    }
+    throw new Error('Failed to send OTP email: ' + (error.message || 'Unknown error'));
   }
 };
 
