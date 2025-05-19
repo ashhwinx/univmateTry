@@ -11,6 +11,7 @@ const otpStore = {}; // Temporary in-memory store for OTPs
 module.exports.generateOTP = (email) => {
   const otp = crypto.randomInt(100000, 999999).toString();
   otpStore[email] = { otp, expiresAt: Date.now() + 5 * 60 * 1000 }; // OTP valid for 5 minutes
+  console.log(otp)
   return otp;
 };
 

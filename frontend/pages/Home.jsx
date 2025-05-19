@@ -93,8 +93,6 @@ useEffect(() => {
         <p className="text-lg text-gray-100 pb-4 mt-5 ">
           Made with ❤️ by students, for students
         </p>
-      
-        
       </footer>
 
 

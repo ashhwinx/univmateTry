@@ -52,4 +52,7 @@ router.post('/verify-otp', (req, res) => {
     }
 });
 
+router.post('/check-email', userController.checkEmail);
+
+
 module.exports = router;

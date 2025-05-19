@@ -7,34 +7,49 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(""); // Add this new state
+ 
 
   const cardRef = useRef(null);
   const { user, setUser } = useContext(UserDataContext);
   const navigate = useNavigate();
 
-  const submitHandler = async (e) => {
+ const submitHandler = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setErrorMessage(""); // Clear any previous errors
 
-    const userData = {
-      email: email,
-      password: password,
-    };
+    try {
+      const userData = {
+        email: email,
+        password: password,
+      };
 
-    const response = await axios.post(
-      `${import.meta.env.VITE_BASE_URL}/users/login`,
-      userData
-    );
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/users/login`,
+        userData
+      );
 
-    if (response.status === 201) {
-      const data = response.data;
-      setUser(data.user);
-      
-      localStorage.setItem("token", data.token);
-      navigate("/home");
+      if (response.status === 201) {
+        const data = response.data;
+        setUser(data.user);
+        localStorage.setItem("token", data.token);
+        navigate("/home");
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      // Set error message based on the error response
+      if (error.response?.status === 401) {
+        setErrorMessage("Invalid email or password");
+      } else {
+        setErrorMessage("Something went wrong. Please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
     }
-
-    setEmail("");
-    setPassword("");
   };
 
   // 👇 Tilt Effect Handler
@@ -68,9 +83,7 @@ const Login = () => {
       </Link>
      
       <form onSubmit={submitHandler}>
-        
         <div className="h-screen w-screen bg-[#111]">
-        
           <div className="h-screen w-screen flex justify-center items-center">
             <div
               ref={cardRef}
@@ -87,6 +100,12 @@ const Login = () => {
                 </div>
 
                 <div className="flex flex-col justify-items-start w-full px-6">
+                  {errorMessage && (
+                    <div className="w-full mb-4 px-4 py-2 bg-red-100 border border-red-400 text-red-700 rounded-md text-sm">
+                      {errorMessage}
+                    </div>
+                  )}
+
                   <input
                     required
                     value={email}
@@ -105,8 +124,21 @@ const Login = () => {
                     className="w-full mb-6 px-4 py-2 rounded-md bg-[#0a2a43] text-white placeholder-gray-300 border border-[#0a51ad] focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
                   />
 
-                  <button className="w-full py-2 rounded-md text-white font-semibold bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-800 shadow-lg shadow-blue-900/40 transition-all duration-200">
-                    Log In
+                  <button 
+                    disabled={isLoading}
+                    className="w-full py-2 rounded-md text-white font-semibold bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-800 shadow-lg shadow-blue-900/40 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
+                  >
+                    {isLoading ? (
+                      <div className="flex items-center gap-2">
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span>Logging in...</span>
+                      </div>
+                    ) : (
+                      "Log In"
+                    )}
                   </button>
                 </div>
 

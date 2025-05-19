@@ -201,8 +201,7 @@ const handleUnitClick = (unit) => {
           className="bg-[#004aad] p-6 sm:p-8 rounded-xl text-center shadow-xl max-w-4xl mx-auto"
         >
           <p className="text-lg sm:text-xl font-medium leading-relaxed text-blue-100">
-            Access class notes to stay ahead. Simplified explanations, concise
-            summaries — ace your exams with ease.
+          Ready-to-write assignments — no more last-minute stress, just copy, complete, and submit.
           </p>
         </motion.div>
 

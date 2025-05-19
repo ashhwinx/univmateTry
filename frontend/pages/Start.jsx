@@ -130,17 +130,7 @@ const Start = () => {
             Login
           </Link>
         </div>
-        <div className="text-sm flex justify-center gap-4 mt-2">
-          <a href="#" className="hover:underline">
-            About
-          </a>
-          <a href="#" className="hover:underline">
-            Contact
-          </a>
-          <a href="#" className="hover:underline">
-            Privacy
-          </a>
-        </div>
+        
       </footer>
     </div>
   );

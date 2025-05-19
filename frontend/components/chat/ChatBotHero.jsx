@@ -58,8 +58,7 @@ const ChatBotHero = () => {
       setLoading(false);
     }
   };
-
-  return (
+return (
     <div className="flex justify-center items-center h-[calc(100vh-70px)] bg-[#0e0e0e] px-2">
       <div className="w-full max-w-[95%] sm:max-w-2xl md:max-w-3xl flex flex-col justify-between h-full border rounded-md shadow-md bg-[#1e1e1e]">
         {/* Chat Area */}
@@ -113,6 +112,10 @@ const ChatBotHero = () => {
       </div>
     </div>
   );
+  
 };
 
 export default ChatBotHero;
+
+
+

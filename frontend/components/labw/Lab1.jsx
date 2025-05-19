@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const subjects = [
-  "Engineering Mathematics - II",
+  "CAMD",
   "Engineering Chemistry",
   "Basic Civil Engineering",
   "Basic Mechanical Engineering",
@@ -12,7 +12,7 @@ const subjects = [
 
 // Add this after the subjects array
 const subjectUnits = {
-  "Engineering Mathematics - II": [
+  "CAMD": [
     // "Matrices and Linear Equations",
     // "Calculus",
     // "Multiple Integrals",
@@ -87,7 +87,7 @@ const subjectUnits = {
 };
 // Add this after subjectUnits object
 const pdfUrls = {
-  "Engineering Mathematics - II": {
+  "CAMD": {
     "Matrices and Linear Equations": "https://drive.google.com/file/d/1_eDxUT4ZakU-9Q_Q77f_mfznpUJRcqlg/preview?embedded=true&rm=minimal",
 
     "Calculus": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",
@@ -202,8 +202,7 @@ const handleUnitClick = (unit) => {
           className="bg-[#004aad] p-6 sm:p-8 rounded-xl text-center shadow-xl max-w-4xl mx-auto"
         >
           <p className="text-lg sm:text-xl font-medium leading-relaxed text-blue-100">
-            Access class notes to stay ahead. Simplified explanations, concise
-            summaries — ace your exams with ease.
+            Get all the practicals you need — neatly written, file-ready content to save your time and effort.
           </p>
         </motion.div>
 

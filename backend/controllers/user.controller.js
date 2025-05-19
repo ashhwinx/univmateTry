@@ -96,3 +96,26 @@ module.exports.logoutUser = async (req, res, next) => {
   }
 }
 
+
+module.exports.checkEmail = async (req, res) => {
+  try {
+    const { email } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ message: 'Email is required' });
+    }
+
+    const user = await userModel.findOne({ email });
+    
+    return res.json({ 
+      exists: !!user 
+    });
+
+  } catch (error) {
+    console.error('Check email error:', error);
+    return res.status(500).json({ 
+      message: 'Server error', 
+      error: error.message 
+    });
+  }
+};
