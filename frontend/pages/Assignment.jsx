@@ -1,10 +1,9 @@
 import React,{useContext,useEffect} from 'react'
 import Navbar from '../components/home/Navbar';
-import { UserDataContext } from "../src/context/UserContext";
 import { useNavigate } from 'react-router-dom';
 import ChatBotMenu from '../components/ChatBotMenu';
 import Assignment1 from '../components/Assignments/Assignment1';
-import Assignment2 from '../components/Assignments/Assignment2';
+import { UserDataContext } from '../src/context/UserContext'; // Adjust the import path as necessary
 
 const  Assignment = () => {
   const { user } = useContext(UserDataContext);
@@ -22,7 +21,7 @@ useEffect(() => {
     <>
     <Navbar/>
     <ChatBotMenu/>
-    {user.section=="A"?<Assignment1/>:<Assignment2/>}
+    <Assignment1/>
     </>
   )
 }
