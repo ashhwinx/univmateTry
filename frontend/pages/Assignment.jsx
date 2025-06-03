@@ -8,14 +8,7 @@ import { UserDataContext } from '../src/context/UserContext'; // Adjust the impo
 const  Assignment = () => {
   const { user } = useContext(UserDataContext);
   const navigate = useNavigate();
-
  
-useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      navigate('/');
-    }
-  }, []); 
   
   return (
     <>

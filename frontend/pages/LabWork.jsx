@@ -7,13 +7,7 @@ import ChatBotMenu from '../components/ChatBotMenu';
 const LabWork = () => {
    const navigate = useNavigate();
 
- 
-useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      navigate('/');
-    }
-  }, []); 
+
   return (
     <>
     <Navbar/>

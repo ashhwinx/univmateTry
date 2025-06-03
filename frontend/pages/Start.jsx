@@ -1,23 +1,33 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import logo from "../components/home/univmatelogo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import Background1 from "../components/home/Background 1.png";
 import Background2 from "../components/home/Background 2.png";
+import {UserDataContext } from "../src/context/UserContext";
 
 
 
 const Start = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, setUser } = useContext(UserDataContext);
+  const [selected, setSelected] = useState(user.section); 
 
 
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSelected(value); 
+    setUser((prev) => ({ ...prev, section: value })); 
+  };
+  
+  
   return (
     <div className="h-screen w-full bg-gradient-to-br from-[#0e0e0e] to-[#1f1f1f] text-white font-[Poppins] overflow-hidden">
       
       {/* Navbar */}
       <div className="w-full bg-[#0a51ae] shadow-md sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-[70px]">
-          <Link to="/home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Univmate Logo" className="h-10" />
           </Link>
 
@@ -25,7 +35,7 @@ const Start = () => {
           <div className="hidden md:flex gap-8 text-[18px] font-semibold">
             {["Class Notes", "Lab Work", "PYQ", "Assignment","UniBuddy"].map((item, i) => (
               <Link
-                to={"/login"}
+                to={`/${item.toLowerCase().replace(" ", "")}`}
                 className="hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-105"
                 key={i}
               >
@@ -59,7 +69,7 @@ const Start = () => {
               {["Class Notes", "Lab Work", "PYQ", "Assignment","UniBuddy"].map(
                 (item, i) => (
                     <Link
-                        to={"/login"}
+                        to={`/${item.toLowerCase().replace(" ", "")}`}
                         className="text-base font-semibold hover:text-gray-300"
                         key={i}>{item}</Link>
                   
@@ -116,19 +126,20 @@ const Start = () => {
         <p className="text-sm text-gray-100 pb-4 ">
           Made with ❤️ by students, for students
         </p>
-        <div className="flex justify-center gap-4 pb-2">
-          <Link
-            to="/signup"
-            className=" bg-white text-[#0a51ae] px-5 py-2 rounded-full font-medium hover:scale-105 transition-transform"
-          >
-            Sign Up
-          </Link>
-          <Link
-            to="/login"
-            className="  bg-white text-[#0a51ae] px-5 py-2 rounded-full font-medium hover:scale-105 transition-transform"
-          >
-            Login
-          </Link>
+        <div className="flex justify-center  gap-4 ">
+         <div className="flex flex-col   items-center justify-center ">
+       <label className="text-white text-sm mb-2 *: font-medium">Choose Section!</label>
+        <select
+        value={selected}
+        onChange={handleChange}
+        
+        className="w-48 px-4 py-2 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-300"
+      >
+        <option value="" disabled>Select A or B</option>
+        <option value="A">Option A</option>
+        <option value="B">Option B</option>
+      </select>
+    </div>
         </div>
         
       </footer>

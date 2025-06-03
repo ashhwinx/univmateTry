@@ -15,10 +15,10 @@ const UnitPDFViewer = () => {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Missing PDF Information</h2>
           <p className="text-gray-600 mb-4">Required information is missing to display the PDF.</p>
           <Link 
-            to="/home" 
+            to="/" 
             className="bg-[#004aad] text-white px-6 py-2 rounded-lg hover:bg-[#003a8d]"
           >
-            Return Home
+            Return /
           </Link>
         </div>
       </div>
@@ -37,7 +37,7 @@ const UnitPDFViewer = () => {
   return (
     <div className="w-full h-screen bg-gray-100">
       <Link 
-        to="/home" 
+        to="/" 
         className="fixed top-4 right-4 z-50 hover:scale-110 transition-transform"
       >
         <p className="text-2xl text-white bg-transparent">🏠︎</p>

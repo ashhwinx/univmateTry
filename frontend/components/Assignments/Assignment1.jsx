@@ -11,15 +11,14 @@ const CNHero = () => {
   const selectorRef = useRef(null);
   const navigate = useNavigate();
   const { user } = useContext(UserDataContext); // Use context to get user data
-  console.log(user)
 
-  const userM = { section: user.section }; // Replace this with actual user context
+ 
 
   // Fetch subjects from backend
   useEffect(() => {
    const fetchSubjects = async () => {
   try {
-    const res = await fetch(`http://localhost:4000/api/materials/${user.section}/assignment`);
+    const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api/materials/${user.section}/assignment`);
     if (!res.ok) {
       throw new Error('Network response was not ok');
     }

@@ -25,7 +25,7 @@ const AdminPanel = () => {
 
   const fetchSubjects = async () => {
     try {
-      const res = await axios.get(`http://localhost:4000/api/materials/${section}/${contentType}`);
+      const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/materials/${section}/${contentType}`);
       setSubjects(res.data);
     } catch (error) {
       console.error(error);
@@ -40,7 +40,7 @@ const AdminPanel = () => {
   const handleSave = async () => {
     if (!editingUnit) return;
     try {
-      await axios.put(`http://localhost:4000/api/materials/update-unit/${editingUnit.subjectId}`, {
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/api/materials/update-unit/${editingUnit.subjectId}`, {
         subjectId: editingUnit.subjectId,
         unitIndex: editingUnit.unitIndex,
         newName: editedData.name,
