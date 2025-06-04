@@ -22,7 +22,7 @@ function App() {
         <Route path="/unibuddy" element={<ChatBot />} />
        
         <Route path="/" element={<Start />} />
-        <Route path="/unit/:id" element={<UnitPDFViewer />} />
+        <Route path="/unit-pdf" element={<UnitPDFViewer />} />
       </Routes>
     </>
   );

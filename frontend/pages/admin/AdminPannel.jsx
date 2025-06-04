@@ -27,6 +27,7 @@ const AdminPanel = () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/materials/${section}/${contentType}`);
       setSubjects(res.data);
+      console.log(res.data)
     } catch (error) {
       console.error(error);
     }

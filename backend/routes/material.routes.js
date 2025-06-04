@@ -77,4 +77,9 @@ router.get('/:section/lab', async (req, res) => {
   res.json(data);
 });
 
+
+
+app.get('/ping', (req, res) => {
+  res.send("pong");
+});
 module.exports = router;
