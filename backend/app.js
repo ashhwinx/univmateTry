@@ -20,5 +20,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/api/materials', materialRoutes);
+app.get('/ping', (req, res) => {
+  res.send("pong");
+});
 
 module.exports = app;
